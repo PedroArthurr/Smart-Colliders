@@ -105,3 +105,12 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Headless test runs
+TestResults.xml
+
+# Packed UPM tarballs
+/dist/
+
+# Claude scratch files
+/.claude/tmp/

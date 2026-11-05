@@ -1,0 +1,15 @@
+{
+    "name": "RecLabs.SmartColliders.Editor",
+    "rootNamespace": "RecLabs.SmartColliders.EditorTools",
+    "references": [
+        "RecLabs.SmartColliders",
+        "Unity.Burst",
+        "Unity.Mathematics",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [ "Editor" ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "autoReferenced": true,
+    "noEngineReferences": false
+}

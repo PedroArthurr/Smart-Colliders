@@ -1,0 +1,19 @@
+{
+    "name": "RecLabs.SmartColliders.Editor.Tests",
+    "rootNamespace": "RecLabs.SmartColliders.Tests",
+    "references": [
+        "RecLabs.SmartColliders",
+        "RecLabs.SmartColliders.Editor",
+        "Unity.Burst",
+        "Unity.Mathematics",
+        "Unity.Collections",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [ "Editor" ],
+    "excludePlatforms": [],
+    "overrideReferences": true,
+    "precompiledReferences": [ "nunit.framework.dll" ],
+    "defineConstraints": [ "UNITY_INCLUDE_TESTS" ],
+    "autoReferenced": false
+}

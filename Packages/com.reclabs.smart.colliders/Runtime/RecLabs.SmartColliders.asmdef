@@ -1,0 +1,14 @@
+{
+    "name": "RecLabs.SmartColliders",
+    "rootNamespace": "RecLabs.SmartColliders",
+    "references": [
+        "Unity.Burst",
+        "Unity.Mathematics",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "autoReferenced": true,
+    "noEngineReferences": false
+}

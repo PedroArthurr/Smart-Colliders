@@ -1,0 +1,468 @@
+/* Smart Colliders — Scene view HUD. Palette: panel #1E1F24, border #34363E,
+   accent (actions) #FFA53D, selection #9B7BFF. Keep in sync with SmartCollidersTheme.cs. */
+
+.sc-hud {
+    position: absolute;
+    align-items: center;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+}
+
+.sc-hud--hidden {
+    opacity: 0;
+}
+
+.sc-panel {
+    background-color: rgba(24, 25, 30, 0.94);
+    border-width: 1px;
+    border-color: rgb(52, 54, 62);
+    border-radius: 12px;
+}
+
+/* ---------- stats card ---------- */
+
+.sc-card {
+    flex-direction: column;
+    padding: 8px 14px 9px 14px;
+    margin-bottom: 8px;
+    min-width: 236px;
+}
+
+.sc-card__title {
+    font-size: 11px;
+    color: rgb(154, 157, 168);
+    -unity-text-align: middle-center;
+    margin-bottom: 4px;
+}
+
+.sc-metrics {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sc-metric {
+    align-items: center;
+    padding: 0 6px;
+}
+
+.sc-metric__value {
+    font-size: 17px;
+    -unity-font-style: bold;
+    color: rgb(235, 236, 240);
+}
+
+.sc-metric__caption {
+    font-size: 10px;
+    color: rgb(154, 157, 168);
+}
+
+.sc-counts {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top-width: 1px;
+    border-color: rgb(52, 54, 62);
+}
+
+.sc-count {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 6px;
+}
+
+.sc-count .sc-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+}
+
+.sc-count__label {
+    font-size: 11px;
+    color: rgb(200, 202, 210);
+}
+
+.sc-count--zero {
+    opacity: 0.35;
+}
+
+/* ---------- toolbar ---------- */
+
+.sc-toolbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+}
+
+.sc-divider {
+    width: 1px;
+    height: 26px;
+    margin: 0 6px;
+    background-color: rgb(52, 54, 62);
+}
+
+.sc-btn {
+    width: 40px;
+    height: 40px;
+    margin: 0 1px;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0);
+    transition-property: background-color, scale;
+    transition-duration: 0.12s, 0.08s;
+    transition-timing-function: ease-out;
+}
+
+.sc-btn:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+.sc-btn:active {
+    background-color: rgba(255, 255, 255, 0.16);
+    scale: 0.92 0.92;
+}
+
+.sc-btn--on {
+    background-color: rgba(255, 165, 61, 0.22);
+}
+
+.sc-btn--on:hover {
+    background-color: rgba(255, 165, 61, 0.32);
+}
+
+.sc-btn--danger:hover {
+    background-color: rgba(255, 107, 107, 0.22);
+}
+
+.sc-btn:disabled {
+    opacity: 0.3;
+}
+
+.sc-btn--current-type {
+    border-width: 1px;
+    border-color: rgba(155, 123, 255, 0.85);
+}
+
+.sc-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.sc-primary {
+    height: 40px;
+    margin-left: 4px;
+    padding: 0 16px;
+    border-radius: 9px;
+    justify-content: center;
+    background-color: rgb(255, 165, 61);
+    transition-property: background-color, scale;
+    transition-duration: 0.12s, 0.08s;
+}
+
+.sc-primary:hover {
+    background-color: rgb(255, 184, 102);
+}
+
+.sc-primary:active {
+    scale: 0.95 0.95;
+}
+
+.sc-primary__label {
+    font-size: 13px;
+    -unity-font-style: bold;
+    color: rgb(21, 22, 26);
+}
+
+.sc-hint {
+    margin-top: 6px;
+    padding: 2px 9px;
+    border-radius: 8px;
+    background-color: rgba(24, 25, 30, 0.72);
+    font-size: 10px;
+    color: rgba(220, 222, 230, 0.85);
+    -unity-text-align: middle-center;
+}
+
+.sc-btn--compact {
+    width: 32px;
+}
+
+/* ---------- sub bars (rotate / paint) ---------- */
+
+.sc-subbar {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 6px;
+    padding: 4px 6px;
+    border-radius: 10px;
+}
+
+.sc-axis {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 4px;
+}
+
+.sc-axis__label {
+    font-size: 12px;
+    -unity-font-style: bold;
+    width: 14px;
+    -unity-text-align: middle-center;
+}
+
+.sc-chip {
+    height: 26px;
+    min-width: 34px;
+    padding: 0 7px;
+    margin: 0 2px;
+    border-radius: 7px;
+    font-size: 11px;
+    color: rgb(214, 216, 224);
+    -unity-text-align: middle-center;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition-property: background-color, scale;
+    transition-duration: 0.12s, 0.08s;
+}
+
+.sc-chip:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.sc-chip:active {
+    background-color: rgba(255, 255, 255, 0.18);
+    scale: 0.94 0.94;
+}
+
+.sc-chip:disabled {
+    opacity: 0.3;
+}
+
+.sc-chip--wide {
+    margin-left: 6px;
+    padding: 0 10px;
+}
+
+.sc-field {
+    width: 52px;
+    margin: 0 2px;
+}
+
+.sc-field > .unity-base-field__input {
+    height: 24px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: rgb(52, 54, 62);
+    background-color: rgb(16, 17, 21);
+    color: rgb(235, 236, 240);
+    -unity-text-align: middle-center;
+    font-size: 11px;
+    padding: 0 4px;
+}
+
+.sc-field:focus > .unity-base-field__input {
+    border-color: rgba(255, 165, 61, 0.9);
+}
+
+.sc-icon--small {
+    width: 16px;
+    height: 16px;
+    margin: 0 4px 0 2px;
+}
+
+.sc-slider {
+    width: 110px;
+    margin: 0 6px 0 0;
+}
+
+.sc-slider .unity-base-slider__tracker {
+    height: 4px;
+    margin-top: -2px;
+    border-radius: 2px;
+    border-width: 0;
+    background-color: rgb(52, 54, 62);
+}
+
+.sc-slider .unity-base-slider__dragger {
+    width: 14px;
+    height: 14px;
+    margin-top: -7px;
+    border-radius: 7px;
+    border-width: 0;
+    background-color: rgb(155, 123, 255);
+}
+
+.sc-subbar__count {
+    min-width: 64px;
+    font-size: 11px;
+    color: rgb(200, 202, 210);
+    -unity-text-align: middle-center;
+    margin-right: 4px;
+}
+
+.sc-btn--small {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+}
+
+.sc-btn--small .sc-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.sc-primary--small {
+    height: 30px;
+    padding: 0 14px;
+    border-radius: 7px;
+    margin-left: 6px;
+}
+
+.sc-primary:disabled {
+    opacity: 0.35;
+}
+
+/* ---------- generate popover ---------- */
+
+.sc-popover {
+    flex-direction: column;
+    margin-top: 6px;
+    padding: 10px 12px 12px 12px;
+    width: 400px;
+}
+
+.sc-popover__header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.sc-popover__title {
+    flex-grow: 1;
+    font-size: 13px;
+    -unity-font-style: bold;
+    color: rgb(240, 241, 244);
+}
+
+.sc-key {
+    font-size: 10px;
+    -unity-font-style: bold;
+    color: rgb(200, 202, 210);
+    padding: 1px 6px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: rgb(70, 72, 82);
+    background-color: rgb(36, 37, 43);
+}
+
+.sc-popover__row {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.sc-popover__label {
+    width: 92px;
+    font-size: 11px;
+    color: rgb(154, 157, 168);
+}
+
+.sc-popover__help {
+    font-size: 10px;
+    color: rgb(130, 133, 145);
+    white-space: normal;
+    margin: 3px 0 2px 92px;
+}
+
+.sc-chip--option {
+    height: 22px;
+    min-width: 30px;
+    font-size: 10px;
+}
+
+.sc-chip--on,
+.sc-chip--on:hover {
+    background-color: rgb(255, 165, 61);
+    color: rgb(28, 22, 14);
+    -unity-font-style: bold;
+}
+
+.sc-popover__go {
+    margin: 10px 0 0 0;
+    height: 30px;
+    justify-content: center;
+}
+
+/* ---------- decomposition progress overlay ---------- */
+
+.sc-progress-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 18px;
+    align-items: center;
+    opacity: 1;
+    translate: 0 0;
+    transition-property: opacity, translate;
+    transition-duration: 0.2s;
+}
+
+.sc-progress-overlay--hidden {
+    opacity: 0;
+    translate: 0 12px;
+    display: none;
+}
+
+.sc-progress-card {
+    width: 360px;
+    padding: 10px 12px 12px 12px;
+}
+
+.sc-progress-card__top {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.sc-progress-card__texts {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 8px;
+}
+
+.sc-progress-card__title {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: rgb(240, 241, 244);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sc-progress-card__info {
+    font-size: 10px;
+    color: rgb(154, 157, 168);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sc-progress-card__bar {
+    height: 5px;
+    border-radius: 3px;
+    background-color: rgb(46, 48, 56);
+    overflow: hidden;
+}
+
+.sc-progress-card__fill {
+    height: 100%;
+    width: 0;
+    border-radius: 3px;
+    background-color: rgb(255, 165, 61);
+    transition-property: width, background-color;
+    transition-duration: 0.2s;
+}
+
+.sc-progress-card__fill--paused {
+    background-color: rgb(155, 123, 255);
+}

@@ -1,0 +1,38 @@
+{
+  "name": "com.reclabs.smart.colliders",
+  "displayName": "Smart Colliders",
+  "version": "1.0.0",
+  "unity": "6000.3",
+  "description": "Automatic collider generation and editing for static and skinned meshes (3D and 2D): primitive fitting, convex hulls, decomposition into compound colliders (V-HACD, CoACD, built-in), Scene view authoring, batch processing and baking.",
+  "keywords": [
+    "collider",
+    "physics",
+    "convex",
+    "decomposition",
+    "vhacd",
+    "coacd",
+    "editor",
+    "tool"
+  ],
+  "author": {
+    "name": "RecLabs",
+    "url": "https://github.com/PedroArthurr"
+  },
+  "documentationUrl": "https://github.com/PedroArthurr/Smart-Colliders/blob/main/Packages/com.reclabs.smart.colliders/README.md",
+  "changelogUrl": "https://github.com/PedroArthurr/Smart-Colliders/blob/main/Packages/com.reclabs.smart.colliders/CHANGELOG.md",
+  "licensesUrl": "https://github.com/PedroArthurr/Smart-Colliders/blob/main/Packages/com.reclabs.smart.colliders/Third%20Party%20Notices.md",
+  "dependencies": {
+    "com.unity.burst": "1.8.29",
+    "com.unity.mathematics": "1.3.3",
+    "com.unity.collections": "2.6.6",
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.physics2d": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "Demo Scene Builder",
+      "description": "Menu Tools > Smart Colliders > Samples > Create Demo Scene: builds a rover (Per Mesh), an L-shaped arch (Decompose) and a sprite (2D) ready to generate, refine and bake.",
+      "path": "Samples~/DemoSceneBuilder"
+    }
+  ]
+}

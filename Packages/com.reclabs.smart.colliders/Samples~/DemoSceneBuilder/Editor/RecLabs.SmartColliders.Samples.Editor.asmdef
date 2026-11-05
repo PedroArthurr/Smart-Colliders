@@ -1,0 +1,7 @@
+{
+    "name": "RecLabs.SmartColliders.Samples.Editor",
+    "rootNamespace": "RecLabs.SmartColliders.Samples",
+    "references": [ "RecLabs.SmartColliders", "RecLabs.SmartColliders.Editor" ],
+    "includePlatforms": [ "Editor" ],
+    "autoReferenced": false
+}

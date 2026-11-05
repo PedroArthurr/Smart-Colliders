@@ -1,0 +1,6 @@
+# Keep this package out of Git LFS so it installs from a git URL without git-lfs on the consumer side.
+* !filter !diff !merge
+*.dll   binary
+*.dylib binary
+*.so    binary
+*.png   binary
